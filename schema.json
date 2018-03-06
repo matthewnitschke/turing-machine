@@ -1,0 +1,30 @@
+{
+    "q0": {
+        "start": true,
+        "paths": {
+            "1": {
+                "to": "q1",
+                "direction": "r",
+                "write": "x"
+            },
+            "0": {
+                "to": "q1",
+                "direction": "r",
+                "write": "o"
+            }
+        }
+    },
+    "q1": {
+        "accepting": true,
+        "paths": {
+            "0": {
+                "to": "q1",
+                "direction": "r"
+            },
+            "1": {
+                "to": "q1",
+                "direction": "r"
+            }
+        }
+    }
+}
