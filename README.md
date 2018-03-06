@@ -1,1 +1,3 @@
-turing-macine
+# Turing Macine
+
+A simple turing machine emulator 
