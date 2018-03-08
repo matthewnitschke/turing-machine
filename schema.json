@@ -2,27 +2,93 @@
     "q0": {
         "start": true,
         "paths": {
+            "x": {
+                "to": "q0",
+                "direction": "r"
+            },
             "1": {
                 "to": "q1",
-                "direction": "r",
-                "write": "x"
+                "write": "x",
+                "direction": "r"
             },
             "0": {
-                "to": "q1",
-                "direction": "r",
-                "write": "o"
+                "to": "q2",
+                "write": "x",
+                "direction": "r"
+            },
+            " ": {
+                "to": "qf",
+                "direction": "l"
             }
         }
     },
     "q1": {
-        "accepting": true,
         "paths": {
-            "0": {
+            "x": {
                 "to": "q1",
                 "direction": "r"
             },
             "1": {
                 "to": "q1",
+                "direction": "r"
+            },
+            "0": {
+                "to": "q3",
+                "direction": "l",
+                "write": "x"
+            }
+        }
+    },
+    "q2": {
+       "paths": {
+           "x": {
+               "to": "q2",
+               "direction": "r"
+           },
+           "0": {
+               "to": "q2",
+               "direction": "r"
+           },
+           "1": {
+               "to": "q3",
+               "direction": "l",
+               "write": "x"
+           }
+       }
+    },
+    "q3": {
+        "paths": {
+            "1": {
+                "to": "q3",
+                "direction": "l"
+            },
+            "0": {
+                "to": "q3",
+                "direction": "l"
+            },
+            "x": {
+                "to": "q3",
+                "direction": "l"
+            },
+            " ": {
+                "to": "q0",
+                "direction": "r"
+            }
+        }
+    },
+    "qf": {
+        "accepting": true,
+        "paths": {
+            "x": {
+                "to": "qf",
+                "direction": "r"
+            },
+            "1": {
+                "to": "qf",
+                "direction": "r"
+            },
+            "0": {
+                "to": "qf",
                 "direction": "r"
             }
         }
